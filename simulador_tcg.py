@@ -52,7 +52,8 @@ while m1_vida > 0  and m2_vida > 0:
         m1_vida = atacar(m2_nome, m2_ataque, m1_nome, m1_vida)
     print('\n  ')
     exibir_placar(m2_nome, m2_vida, m1_nome, m1_vida)
-    
+# resultados 
+   
 print( '=' * 30)
 print('      O duelo encerrou!')
 print( '=' * 30)
