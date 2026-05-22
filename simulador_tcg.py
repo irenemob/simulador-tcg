@@ -6,7 +6,7 @@ m1_ataque = int(input(f'Por fim, digite os pontos de ataque do {m1_nome}: '))
 
 # validacao 1
 if m1_vida <= 0 or m1_ataque <= 0:
-    print('ERRO! A vida e o ataque devem ser maiores que zero. Tente novamente!')
+    print('ERRO! Os pontos devem ser maiores que zero. Tente novamente!')
     quit()
 
 # monstro 2
@@ -18,3 +18,25 @@ m2_ataque = int(input(f'Por fim, digite os pontos de ataque do {m2_nome}: '))
 if m2_vida <= 0 or m2_ataque <= 0:
     print('ERRO! A vida e o ataque devem ser maiores que zero. Tente novamente!')
     quit()
+
+#funcoes
+
+def atacar(nome_atacante, ataque, nome_defensor, hp_defensor):
+    novo_hp = hp_defensor - ataque
+    
+    if novo_hp < 0:
+        novo_hp = 0
+        
+    
+    print(f"\n{nome_atacante} atacou {nome_defensor} causando {ataque} de dano!")
+    
+   
+    return novo_hp
+
+def exibir_placar(nome1, hp1, nome2, hp2):
+    print("=" * 30)
+    print("       PLACAR ATUAL             ")
+    print("=" * 30)
+    print(f" {nome1}: {hp1} HP")
+    print(f" {nome2}: {hp2} HP")
+    print("=" * 30 + "\n")
